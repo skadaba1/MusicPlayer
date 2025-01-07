@@ -1,0 +1,32 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Wed Dec 13 00:09:45 2023
+# Process ID: 9952
+# Current directory: C:/Users/schwinn/final_project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent4880 C:\Users\schwinn\final_project\project_1.xpr
+# Log file: C:/Users/schwinn/final_project/vivado.log
+# Journal file: C:/Users/schwinn/final_project\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/schwinn/final_project/project_1.xpr
+CRITICAL WARNING: [Project 1-19] Could not find the file 'C:/Users/schwinn/final_project/chord_player_tb.v'.
+Scanning sources...
+Finished scanning sources
+WARNING: [filemgmt 56-3] IP Repository Path: Could not find the directory 'C:/Users/schwinn/Downloads/hdmi_tx_ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/schwinn/Downloads/hdmi_tx_ip'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+WARNING: [IP_Flow 19-2162] IP 'hdmi_tx_0' is locked:
+* IP definition 'hdmi_tx (1.1)' for IP 'hdmi_tx_0' (customized with software release 2019.1) was not found in the IP Catalog.
+update_compile_order -fileset sources_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Wed Dec 13 00:11:10 2023] Launched synth_1...
+Run output will be captured here: C:/Users/schwinn/final_project/project_1.runs/synth_1/runme.log
+[Wed Dec 13 00:11:10 2023] Launched impl_1...
+Run output will be captured here: C:/Users/schwinn/final_project/project_1.runs/impl_1/runme.log
+reset_run synth_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Dec 13 00:17:07 2023...

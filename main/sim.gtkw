@@ -1,0 +1,136 @@
+[*]
+[*] GTKWave Analyzer v3.4.0 (w)1999-2022 BSI
+[*] Mon Dec 11 03:59:39 2023
+[*]
+[dumpfile] "music_player_tb.vcd"
+[dumpfile_mtime] "Mon Dec 11 03:56:05 2023"
+[dumpfile_size] 224124880
+[savefile] "sim.gtkw"
+[timestart] 0
+[size] 1728 1051
+[pos] -1 -1
+*-16.680134 35000 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+[markername] AA
+[markername] BB
+[markername] CC
+[markername] DD
+[markername] EE
+[markername] FF
+[markername] GG
+[markername] HH
+[markername] II
+[markername] JJ
+[markername] KK
+[markername] LL
+[markername] MM
+[markername] NN
+[markername] OO
+[markername] PP
+[markername] QQ
+[markername] RR
+[markername] SS
+[markername] TT
+[markername] UU
+[markername] VV
+[markername] WW
+[markername] XX
+[markername] YY
+[markername] ZZ
+[treeopen] music_player_tb.
+[treeopen] music_player_tb.music_player.
+[treeopen] music_player_tb.music_player.cp.
+[sst_width] 253
+[signals_width] 204
+[sst_expanded] 1
+[sst_vpaned_height] 308
+@28
+music_player_tb.music_player.cp.slot1.clk
+music_player_tb.music_player.play_button
+music_player_tb.music_player.next_button
+@24
+music_player_tb.music_player.current_song[1:0]
+music_player_tb.music_player.song_reader.rom_addr[8:0]
+music_player_tb.music_player.song_reader.rom_out[15:0]
+@28
+music_player_tb.music_player.cp.generate_next_sample
+@22
+music_player_tb.music_player.cp.sample_out[15:0]
+@28
+music_player_tb.music_player.cp.sample_ready
+@24
+music_player_tb.music_player.cp.slot1.load_new_note_this_slot
+music_player_tb.music_player.cp.curr_note_1[5:0]
+music_player_tb.music_player.cp.curr_duration_1[5:0]
+music_player_tb.music_player.cp.curr_elapsed_1[5:0]
+@28
+music_player_tb.music_player.cp.note_ready_1
+@c08420
+music_player_tb.music_player.cp.note_sample_1[15:0]
+@28
+(0)music_player_tb.music_player.cp.note_sample_1[15:0]
+(1)music_player_tb.music_player.cp.note_sample_1[15:0]
+(2)music_player_tb.music_player.cp.note_sample_1[15:0]
+(3)music_player_tb.music_player.cp.note_sample_1[15:0]
+(4)music_player_tb.music_player.cp.note_sample_1[15:0]
+(5)music_player_tb.music_player.cp.note_sample_1[15:0]
+(6)music_player_tb.music_player.cp.note_sample_1[15:0]
+(7)music_player_tb.music_player.cp.note_sample_1[15:0]
+(8)music_player_tb.music_player.cp.note_sample_1[15:0]
+(9)music_player_tb.music_player.cp.note_sample_1[15:0]
+(10)music_player_tb.music_player.cp.note_sample_1[15:0]
+(11)music_player_tb.music_player.cp.note_sample_1[15:0]
+(12)music_player_tb.music_player.cp.note_sample_1[15:0]
+(13)music_player_tb.music_player.cp.note_sample_1[15:0]
+(14)music_player_tb.music_player.cp.note_sample_1[15:0]
+(15)music_player_tb.music_player.cp.note_sample_1[15:0]
+@1401600
+-group_end
+@20000
+-
+-
+-
+@8420
+music_player_tb.music_player.cp.dyn_1.sample_out[15:0]
+@20000
+-
+-
+-
+@24
+music_player_tb.music_player.cp.slot2.load_new_note_this_slot
+music_player_tb.music_player.cp.curr_note_2[5:0]
+music_player_tb.music_player.cp.curr_duration_2[5:0]
+music_player_tb.music_player.cp.curr_elapsed_2[5:0]
+@28
+music_player_tb.music_player.cp.note_ready_2
+@8421
+music_player_tb.music_player.cp.note_sample_2[15:0]
+@20000
+-
+-
+-
+@24
+music_player_tb.music_player.cp.slot3.load_new_note_this_slot
+music_player_tb.music_player.cp.curr_note_3[5:0]
+music_player_tb.music_player.cp.curr_duration_3[5:0]
+music_player_tb.music_player.cp.curr_elapsed_3[5:0]
+@28
+music_player_tb.music_player.cp.note_ready_3
+@8420
+music_player_tb.music_player.cp.note_sample_3[15:0]
+@20000
+-
+-
+-
+@24
+music_player_tb.music_player.cp.slot4.load_new_note_this_slot
+music_player_tb.music_player.cp.curr_note_4[5:0]
+music_player_tb.music_player.cp.curr_duration_4[5:0]
+music_player_tb.music_player.cp.curr_elapsed_4[5:0]
+@8420
+music_player_tb.music_player.cp.sample_out[15:0]
+@20000
+-
+-
+-
+[pattern_trace] 1
+[pattern_trace] 0

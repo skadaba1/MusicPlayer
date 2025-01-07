@@ -1,0 +1,1390 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Tue Dec 12 15:35:03 2023
+# Process ID: 8404
+# Current directory: C:/Users/schwinn/final_project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent1208 C:\Users\schwinn\final_project\project_1.xpr
+# Log file: C:/Users/schwinn/final_project/vivado.log
+# Journal file: C:/Users/schwinn/final_project\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/schwinn/final_project/project_1.xpr
+CRITICAL WARNING: [Project 1-19] Could not find the file 'C:/Users/schwinn/final_project/chord_player_tb.v'.
+Scanning sources...
+Finished scanning sources
+WARNING: [filemgmt 56-3] IP Repository Path: Could not find the directory 'C:/Users/schwinn/Downloads/hdmi_tx_ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/schwinn/Downloads/hdmi_tx_ip'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+WARNING: [IP_Flow 19-2162] IP 'hdmi_tx_0' is locked:
+* IP definition 'hdmi_tx (1.1)' for IP 'hdmi_tx_0' (customized with software release 2019.1) was not found in the IP Catalog.
+open_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:06 . Memory (MB): peak = 731.180 ; gain = 98.191
+update_compile_order -fileset sources_1
+open_run impl_1
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Netlist 29-17] Analyzing 250 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.381 . Memory (MB): peak = 1726.281 ; gain = 0.000
+Restored from archive | CPU: 1.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.382 . Memory (MB): peak = 1726.281 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1726.281 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 1 instances
+
+open_run: Time (s): cpu = 00:00:35 ; elapsed = 00:00:25 . Memory (MB): peak = 1858.262 ; gain = 998.180
+CRITICAL WARNING: [Timing 38-282] The design failed to meet the timing requirements. Please see the timing summary report for details on the timing violations.
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+[Tue Dec 12 15:54:07 2023] Launched synth_1...
+Run output will be captured here: C:/Users/schwinn/final_project/project_1.runs/synth_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Tue Dec 12 15:55:39 2023] Launched synth_1...
+Run output will be captured here: C:/Users/schwinn/final_project/project_1.runs/synth_1/runme.log
+[Tue Dec 12 15:55:39 2023] Launched impl_1...
+Run output will be captured here: C:/Users/schwinn/final_project/project_1.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2019.1
+  **** Build date : May 24 2019 at 15:13:31
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+open_hw_target: Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 3869.781 ; gain = 888.648
+set_property PROGRAM.FILE {C:/Users/schwinn/final_project/project_1.runs/impl_1/lab5_top.bit} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/Users/schwinn/final_project/project_1.runs/impl_1/lab5_top.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+INFO: [Labtools 27-1435] Device xc7z020 (JTAG device index = 1) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/Users/schwinn/final_project/project_1.runs/impl_1/lab5_top.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+ERROR: [Labtools 27-3165] End of startup status: LOW
+ERROR: [Common 17-39] 'program_hw_devices' failed due to earlier errors.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+disconnect_hw_server localhost:3121
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+ERROR: [Labtools 27-2269] No devices detected on target localhost:3121/xilinx_tcf/Xilinx/1234-tulA.
+Check cable connectivity and that the target board is powered up then
+use the disconnect_hw_server and connect_hw_server to re-register this hardware target.
+ERROR: [Common 17-39] 'open_hw_target' failed due to earlier errors.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/Users/schwinn/final_project/project_1.runs/impl_1/lab5_top.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/Users/schwinn/final_project/project_1.runs/impl_1/lab5_top.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+report_timing_summary: Time (s): cpu = 00:00:10 ; elapsed = 00:00:05 . Memory (MB): peak = 3875.074 ; gain = 0.000
+close_design
+open_run impl_1
+INFO: [Netlist 29-17] Analyzing 195 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.404 . Memory (MB): peak = 3875.074 ; gain = 0.000
+Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.404 . Memory (MB): peak = 3875.074 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 3875.074 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 1 instances
+
+CRITICAL WARNING: [Timing 38-282] The design failed to meet the timing requirements. Please see the timing summary report for details on the timing violations.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/schwinn/final_project/project_1.runs/synth_1
+
+launch_runs synth_1 -jobs 8
+[Tue Dec 12 16:13:32 2023] Launched synth_1...
+Run output will be captured here: C:/Users/schwinn/final_project/project_1.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 8
+[Tue Dec 12 16:14:54 2023] Launched impl_1...
+Run output will be captured here: C:/Users/schwinn/final_project/project_1.runs/impl_1/runme.log
+close_design
+close_hw
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7z020clg400-1
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/schwinn/final_project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp' for cell 'U2'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/schwinn/final_project/project_1.srcs/sources_1/ip/hdmi_tx_0/hdmi_tx_0.dcp' for cell 'U3'
+INFO: [Netlist 29-17] Analyzing 186 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [c:/Users/schwinn/final_project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'U2/inst'
+Finished Parsing XDC File [c:/Users/schwinn/final_project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'U2/inst'
+Parsing XDC File [c:/Users/schwinn/final_project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'U2/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [c:/Users/schwinn/final_project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc:57]
+INFO: [Timing 38-2] Deriving generated clocks [c:/Users/schwinn/final_project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc:57]
+Finished Parsing XDC File [c:/Users/schwinn/final_project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'U2/inst'
+Parsing XDC File [C:/Users/schwinn/final_project/lab5.xdc]
+Finished Parsing XDC File [C:/Users/schwinn/final_project/lab5.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 3883.051 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 1 instances
+
+close_design
+open_run impl_1
+INFO: [Netlist 29-17] Analyzing 186 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.352 . Memory (MB): peak = 3883.051 ; gain = 0.000
+Restored from archive | CPU: 1.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.353 . Memory (MB): peak = 3883.051 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 3883.051 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 1 instances
+
+CRITICAL WARNING: [Timing 38-282] The design failed to meet the timing requirements. Please see the timing summary report for details on the timing violations.
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Tue Dec 12 16:28:03 2023] Launched impl_1...
+Run output will be captured here: C:/Users/schwinn/final_project/project_1.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2019.1
+  **** Build date : May 24 2019 at 15:13:31
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+set_property PROGRAM.FILE {C:/Users/schwinn/final_project/project_1.runs/impl_1/lab5_top.bit} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/Users/schwinn/final_project/project_1.runs/impl_1/lab5_top.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+close_hw
+close_design
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/schwinn/final_project/project_1.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Tue Dec 12 16:39:24 2023] Launched synth_1...
+Run output will be captured here: C:/Users/schwinn/final_project/project_1.runs/synth_1/runme.log
+[Tue Dec 12 16:39:25 2023] Launched impl_1...
+Run output will be captured here: C:/Users/schwinn/final_project/project_1.runs/impl_1/runme.log
+update_compile_order -fileset sources_1
+reset_run impl_1
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/schwinn/final_project/project_1.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Tue Dec 12 16:42:21 2023] Launched synth_1...
+Run output will be captured here: C:/Users/schwinn/final_project/project_1.runs/synth_1/runme.log
+[Tue Dec 12 16:42:21 2023] Launched impl_1...
+Run output will be captured here: C:/Users/schwinn/final_project/project_1.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2019.1
+  **** Build date : May 24 2019 at 15:13:31
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+set_property PROGRAM.FILE {C:/Users/schwinn/final_project/project_1.runs/impl_1/lab5_top.bit} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/Users/schwinn/final_project/project_1.runs/impl_1/lab5_top.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+open_run impl_1
+INFO: [Netlist 29-17] Analyzing 162 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.323 . Memory (MB): peak = 4176.758 ; gain = 0.000
+Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.323 . Memory (MB): peak = 4176.758 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 4176.758 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 1 instances
+
+open_run: Time (s): cpu = 00:00:09 ; elapsed = 00:00:07 . Memory (MB): peak = 4176.758 ; gain = 0.000
+CRITICAL WARNING: [Timing 38-282] The design failed to meet the timing requirements. Please see the timing summary report for details on the timing violations.
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/schwinn/final_project/project_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'C:/Users/schwinn/final_project/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'music_player_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/schwinn/final_project/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj music_player_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/ac97_if.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ac97_if
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/beat_generator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module beat_generator
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/chord_player.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module chord_player
+INFO: [VRFC 10-2458] undeclared symbol curr_note_1, assumed default net type wire [C:/Users/schwinn/final_project/chord_player.v:38]
+INFO: [VRFC 10-2458] undeclared symbol curr_duration_1, assumed default net type wire [C:/Users/schwinn/final_project/chord_player.v:39]
+INFO: [VRFC 10-2458] undeclared symbol curr_elapsed_1, assumed default net type wire [C:/Users/schwinn/final_project/chord_player.v:40]
+INFO: [VRFC 10-2458] undeclared symbol curr_note_2, assumed default net type wire [C:/Users/schwinn/final_project/chord_player.v:53]
+INFO: [VRFC 10-2458] undeclared symbol curr_duration_2, assumed default net type wire [C:/Users/schwinn/final_project/chord_player.v:54]
+INFO: [VRFC 10-2458] undeclared symbol curr_elapsed_2, assumed default net type wire [C:/Users/schwinn/final_project/chord_player.v:55]
+INFO: [VRFC 10-2458] undeclared symbol curr_note_3, assumed default net type wire [C:/Users/schwinn/final_project/chord_player.v:68]
+INFO: [VRFC 10-2458] undeclared symbol curr_duration_3, assumed default net type wire [C:/Users/schwinn/final_project/chord_player.v:69]
+INFO: [VRFC 10-2458] undeclared symbol curr_elapsed_3, assumed default net type wire [C:/Users/schwinn/final_project/chord_player.v:70]
+INFO: [VRFC 10-2458] undeclared symbol curr_note_4, assumed default net type wire [C:/Users/schwinn/final_project/chord_player.v:83]
+INFO: [VRFC 10-2458] undeclared symbol curr_duration_4, assumed default net type wire [C:/Users/schwinn/final_project/chord_player.v:84]
+INFO: [VRFC 10-2458] undeclared symbol curr_elapsed_4, assumed default net type wire [C:/Users/schwinn/final_project/chord_player.v:85]
+WARNING: [VRFC 10-2938] 'curr_note_1' is already implicitly declared on line 38 [C:/Users/schwinn/final_project/chord_player.v:89]
+WARNING: [VRFC 10-2938] 'curr_duration_1' is already implicitly declared on line 39 [C:/Users/schwinn/final_project/chord_player.v:92]
+WARNING: [VRFC 10-2938] 'curr_elapsed_1' is already implicitly declared on line 40 [C:/Users/schwinn/final_project/chord_player.v:96]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/chord_slot.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module chord_slot
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/codec_conditioner.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module codec_conditioner
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/dff.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dff
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/dffr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dffr
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/dffre.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dffre
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/dynamics.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dynamics
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/frequency_rom.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module frequency_rom
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/mcu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mcu
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/music_player.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module music_player
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/note_player.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module note_player
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/sine_reader.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sine_reader
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/sine_rom.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sine_rom
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/song_reader.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module song_reader
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/song_rom.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module song_rom
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/music_player_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module music_player_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/project_1.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '4' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/schwinn/final_project/project_1.sim/sim_1/behav/xsim'
+"xelab -wto 649fac6bb3f64933b76be66f434eb721 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot music_player_tb_behav xil_defaultlib.music_player_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 649fac6bb3f64933b76be66f434eb721 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot music_player_tb_behav xil_defaultlib.music_player_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "C:/Users/schwinn/final_project/project_1.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.dffre(WIDTH=2)
+Compiling module xil_defaultlib.dffr
+Compiling module xil_defaultlib.mcu
+Compiling module xil_defaultlib.dffr(WIDTH=7)
+Compiling module xil_defaultlib.dffr(WIDTH=3)
+Compiling module xil_defaultlib.song_rom
+Compiling module xil_defaultlib.song_reader
+Compiling module xil_defaultlib.dffre(WIDTH=6)
+Compiling module xil_defaultlib.chord_slot
+Compiling module xil_defaultlib.chord_slot(IS_WAITER=1)
+Compiling module xil_defaultlib.dffre
+Compiling module xil_defaultlib.frequency_rom
+Compiling module xil_defaultlib.dffre(WIDTH=22)
+Compiling module xil_defaultlib.sine_rom
+Compiling module xil_defaultlib.dff
+Compiling module xil_defaultlib.sine_reader
+Compiling module xil_defaultlib.dffr(WIDTH=48)
+Compiling module xil_defaultlib.note_player
+Compiling module xil_defaultlib.dffre(WIDTH=16)
+Compiling module xil_defaultlib.dynamics
+Compiling module xil_defaultlib.chord_player
+Compiling module xil_defaultlib.dffre(WIDTH=10)
+Compiling module xil_defaultlib.beat_generator(STOP=100)
+Compiling module xil_defaultlib.codec_conditioner
+Compiling module xil_defaultlib.music_player
+Compiling module xil_defaultlib.dffr(WIDTH=8)
+Compiling module xil_defaultlib.dffre(WIDTH=32)
+Compiling module xil_defaultlib.ac97_if
+Compiling module xil_defaultlib.music_player_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot music_player_tb_behav
+
+****** Webtalk v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/schwinn/final_project/project_1.sim/sim_1/behav/xsim/xsim.dir/music_player_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Tue Dec 12 17:08:24 2023...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:10 . Memory (MB): peak = 4275.824 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '9' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/schwinn/final_project/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "music_player_tb_behav -key {Behavioral:sim_1:Functional:music_player_tb} -tclbatch {music_player_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source music_player_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 0.01s
+Audio out: sound file audio.snd opened for output.
+Playing first song...
+run: Time (s): cpu = 00:00:45 ; elapsed = 00:01:10 . Memory (MB): peak = 4332.969 ; gain = 0.000
+xsim: Time (s): cpu = 00:00:52 ; elapsed = 00:01:15 . Memory (MB): peak = 4332.969 ; gain = 56.945
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'music_player_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 0.01s
+launch_simulation: Time (s): cpu = 00:00:55 ; elapsed = 00:01:30 . Memory (MB): peak = 4332.969 ; gain = 71.844
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/schwinn/final_project/project_1.runs/synth_1
+
+launch_runs synth_1 -jobs 8
+[Tue Dec 12 17:11:19 2023] Launched synth_1...
+Run output will be captured here: C:/Users/schwinn/final_project/project_1.runs/synth_1/runme.log
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/schwinn/final_project/project_1.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Tue Dec 12 17:14:05 2023] Launched synth_1...
+Run output will be captured here: C:/Users/schwinn/final_project/project_1.runs/synth_1/runme.log
+[Tue Dec 12 17:14:05 2023] Launched impl_1...
+Run output will be captured here: C:/Users/schwinn/final_project/project_1.runs/impl_1/runme.log
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run all
+Audio out: sound file audio.snd opened for output.
+Playing first song...
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run all
+Audio out: sound file audio.snd opened for output.
+Playing first song...
+run: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 4332.969 ; gain = 0.000
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run all
+Audio out: sound file audio.snd opened for output.
+Playing first song...
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/Users/schwinn/final_project/project_1.runs/impl_1/lab5_top.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_2
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+refresh_design
+INFO: [Netlist 29-17] Analyzing 159 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.338 . Memory (MB): peak = 4332.969 ; gain = 0.000
+Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.338 . Memory (MB): peak = 4332.969 ; gain = 0.000
+refresh_design: Time (s): cpu = 00:00:16 ; elapsed = 00:00:13 . Memory (MB): peak = 4332.969 ; gain = 0.000
+CRITICAL WARNING: [Timing 38-282] The design failed to meet the timing requirements. Please see the timing summary report for details on the timing violations.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 4332.969 ; gain = 0.000
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/schwinn/final_project/project_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'C:/Users/schwinn/final_project/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'music_player_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/schwinn/final_project/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj music_player_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/ac97_if.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ac97_if
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/beat_generator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module beat_generator
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/chord_player.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module chord_player
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/chord_slot.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module chord_slot
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/codec_conditioner.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module codec_conditioner
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/dff.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dff
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/dffr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dffr
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/dffre.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dffre
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/dynamics.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dynamics
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'sample_out' is not allowed [C:/Users/schwinn/final_project/dynamics.v:78]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/frequency_rom.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module frequency_rom
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/mcu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mcu
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/music_player.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module music_player
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/note_player.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module note_player
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/sine_reader.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sine_reader
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/sine_rom.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sine_rom
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/song_reader.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module song_reader
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/song_rom.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module song_rom
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/music_player_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module music_player_tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/schwinn/final_project/project_1.sim/sim_1/behav/xsim'
+"xelab -wto 649fac6bb3f64933b76be66f434eb721 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot music_player_tb_behav xil_defaultlib.music_player_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 649fac6bb3f64933b76be66f434eb721 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot music_player_tb_behav xil_defaultlib.music_player_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "C:/Users/schwinn/final_project/project_1.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.dffre(WIDTH=2)
+Compiling module xil_defaultlib.dffr
+Compiling module xil_defaultlib.mcu
+Compiling module xil_defaultlib.dffr(WIDTH=7)
+Compiling module xil_defaultlib.dffr(WIDTH=3)
+Compiling module xil_defaultlib.song_rom
+Compiling module xil_defaultlib.song_reader
+Compiling module xil_defaultlib.dffre(WIDTH=6)
+Compiling module xil_defaultlib.chord_slot
+Compiling module xil_defaultlib.chord_slot(IS_WAITER=1)
+Compiling module xil_defaultlib.dffre
+Compiling module xil_defaultlib.frequency_rom
+Compiling module xil_defaultlib.dffre(WIDTH=22)
+Compiling module xil_defaultlib.sine_rom
+Compiling module xil_defaultlib.dff
+Compiling module xil_defaultlib.sine_reader
+Compiling module xil_defaultlib.dffr(WIDTH=48)
+Compiling module xil_defaultlib.note_player
+Compiling module xil_defaultlib.dffre(WIDTH=16)
+Compiling module xil_defaultlib.dffr(WIDTH=16)
+Compiling module xil_defaultlib.dynamics
+Compiling module xil_defaultlib.chord_player
+Compiling module xil_defaultlib.dffre(WIDTH=10)
+Compiling module xil_defaultlib.beat_generator(STOP=100)
+Compiling module xil_defaultlib.codec_conditioner
+Compiling module xil_defaultlib.music_player
+Compiling module xil_defaultlib.dffr(WIDTH=8)
+Compiling module xil_defaultlib.dffre(WIDTH=32)
+Compiling module xil_defaultlib.ac97_if
+Compiling module xil_defaultlib.music_player_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot music_player_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/schwinn/final_project/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "music_player_tb_behav -key {Behavioral:sim_1:Functional:music_player_tb} -tclbatch {music_player_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source music_player_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 0.01s
+Audio out: sound file audio.snd opened for output.
+Playing first song...
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+run: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 4332.969 ; gain = 0.000
+INFO: [Common 17-344] 'run' was cancelled
+INFO: [Common 17-344] 'source' was cancelled
+xsim: Time (s): cpu = 00:00:06 ; elapsed = 00:00:10 . Memory (MB): peak = 4332.969 ; gain = 0.000
+INFO: [Common 17-344] 'xsim' was cancelled
+INFO: [Vivado 12-5357] 'simulate' step aborted
+launch_simulation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:16 . Memory (MB): peak = 4332.969 ; gain = 0.000
+INFO: [Common 17-344] 'launch_simulation' was cancelled
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run all
+Audio out: sound file audio.snd opened for output.
+Playing first song...
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/schwinn/final_project/project_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'C:/Users/schwinn/final_project/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'music_player_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/schwinn/final_project/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj music_player_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/ac97_if.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ac97_if
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/beat_generator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module beat_generator
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/chord_player.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module chord_player
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/chord_slot.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module chord_slot
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/codec_conditioner.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module codec_conditioner
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/dff.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dff
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/dffr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dffr
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/dffre.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dffre
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/dynamics.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dynamics
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'sample_out' is not allowed [C:/Users/schwinn/final_project/dynamics.v:85]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/frequency_rom.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module frequency_rom
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/mcu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mcu
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/music_player.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module music_player
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/note_player.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module note_player
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/sine_reader.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sine_reader
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/sine_rom.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sine_rom
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/song_reader.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module song_reader
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/song_rom.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module song_rom
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/music_player_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module music_player_tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/schwinn/final_project/project_1.sim/sim_1/behav/xsim'
+"xelab -wto 649fac6bb3f64933b76be66f434eb721 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot music_player_tb_behav xil_defaultlib.music_player_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 649fac6bb3f64933b76be66f434eb721 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot music_player_tb_behav xil_defaultlib.music_player_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "C:/Users/schwinn/final_project/project_1.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.dffre(WIDTH=2)
+Compiling module xil_defaultlib.dffr
+Compiling module xil_defaultlib.mcu
+Compiling module xil_defaultlib.dffr(WIDTH=7)
+Compiling module xil_defaultlib.dffr(WIDTH=3)
+Compiling module xil_defaultlib.song_rom
+Compiling module xil_defaultlib.song_reader
+Compiling module xil_defaultlib.dffre(WIDTH=6)
+Compiling module xil_defaultlib.chord_slot
+Compiling module xil_defaultlib.chord_slot(IS_WAITER=1)
+Compiling module xil_defaultlib.dffre
+Compiling module xil_defaultlib.frequency_rom
+Compiling module xil_defaultlib.dffre(WIDTH=22)
+Compiling module xil_defaultlib.sine_rom
+Compiling module xil_defaultlib.dff
+Compiling module xil_defaultlib.sine_reader
+Compiling module xil_defaultlib.dffr(WIDTH=48)
+Compiling module xil_defaultlib.note_player
+Compiling module xil_defaultlib.dffre(WIDTH=16)
+Compiling module xil_defaultlib.dffr(WIDTH=16)
+Compiling module xil_defaultlib.dynamics
+Compiling module xil_defaultlib.chord_player
+Compiling module xil_defaultlib.dffre(WIDTH=10)
+Compiling module xil_defaultlib.beat_generator(STOP=100)
+Compiling module xil_defaultlib.codec_conditioner
+Compiling module xil_defaultlib.music_player
+Compiling module xil_defaultlib.dffr(WIDTH=8)
+Compiling module xil_defaultlib.dffre(WIDTH=32)
+Compiling module xil_defaultlib.ac97_if
+Compiling module xil_defaultlib.music_player_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot music_player_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/schwinn/final_project/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "music_player_tb_behav -key {Behavioral:sim_1:Functional:music_player_tb} -tclbatch {music_player_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source music_player_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 0.01s
+Audio out: sound file audio.snd opened for output.
+Playing first song...
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+INFO: [Common 17-344] 'run' was cancelled
+INFO: [Common 17-344] 'source' was cancelled
+xsim: Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 4332.969 ; gain = 0.000
+INFO: [Common 17-344] 'xsim' was cancelled
+INFO: [Vivado 12-5357] 'simulate' step aborted
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:13 . Memory (MB): peak = 4332.969 ; gain = 0.000
+INFO: [Common 17-344] 'launch_simulation' was cancelled
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run all
+Audio out: sound file audio.snd opened for output.
+Playing first song...
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/schwinn/final_project/project_1.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Tue Dec 12 17:38:19 2023] Launched synth_1...
+Run output will be captured here: C:/Users/schwinn/final_project/project_1.runs/synth_1/runme.log
+[Tue Dec 12 17:38:19 2023] Launched impl_1...
+Run output will be captured here: C:/Users/schwinn/final_project/project_1.runs/impl_1/runme.log
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+refresh_design
+INFO: [Netlist 29-17] Analyzing 162 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.290 . Memory (MB): peak = 4332.969 ; gain = 0.000
+Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.290 . Memory (MB): peak = 4332.969 ; gain = 0.000
+refresh_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:10 . Memory (MB): peak = 4332.969 ; gain = 0.000
+CRITICAL WARNING: [Timing 38-282] The design failed to meet the timing requirements. Please see the timing summary report for details on the timing violations.
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/Users/schwinn/final_project/project_1.runs/impl_1/lab5_top.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+close_hw
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2019.1
+  **** Build date : May 24 2019 at 15:13:31
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+set_property PROGRAM.FILE {C:/Users/schwinn/final_project/project_1.runs/impl_1/lab5_top.bit} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1435] Device xc7z020 (JTAG device index = 1) is not programmed (DONE status = 0).
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/Users/schwinn/final_project/project_1.runs/impl_1/lab5_top.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+INFO: [Labtools 27-1435] Device xc7z020 (JTAG device index = 1) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+update_compile_order -fileset sources_1
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/schwinn/final_project/project_1.runs/synth_1
+
+launch_runs synth_1 -jobs 8
+[Tue Dec 12 18:18:10 2023] Launched synth_1...
+Run output will be captured here: C:/Users/schwinn/final_project/project_1.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 8
+[Tue Dec 12 18:19:58 2023] Launched impl_1...
+Run output will be captured here: C:/Users/schwinn/final_project/project_1.runs/impl_1/runme.log
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+refresh_design
+INFO: [Netlist 29-17] Analyzing 195 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.367 . Memory (MB): peak = 4332.969 ; gain = 0.000
+Restored from archive | CPU: 1.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.368 . Memory (MB): peak = 4332.969 ; gain = 0.000
+refresh_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:11 . Memory (MB): peak = 4332.969 ; gain = 0.000
+CRITICAL WARNING: [Timing 38-282] The design failed to meet the timing requirements. Please see the timing summary report for details on the timing violations.
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Tue Dec 12 18:27:29 2023] Launched impl_1...
+Run output will be captured here: C:/Users/schwinn/final_project/project_1.runs/impl_1/runme.log
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/Users/schwinn/final_project/project_1.runs/impl_1/lab5_top.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+INFO: [Labtools 27-1435] Device xc7z020 (JTAG device index = 1) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1435] Device xc7z020 (JTAG device index = 1) is not programmed (DONE status = 0).
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/Users/schwinn/final_project/project_1.runs/impl_1/lab5_top.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+close_hw
+close_design
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/schwinn/final_project/project_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'C:/Users/schwinn/final_project/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'music_player_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/schwinn/final_project/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj music_player_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/ac97_if.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ac97_if
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/beat_generator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module beat_generator
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/chord_player.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module chord_player
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/chord_slot.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module chord_slot
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/codec_conditioner.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module codec_conditioner
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/dff.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dff
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/dffr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dffr
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/dffre.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dffre
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/dynamics.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dynamics
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/frequency_rom.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module frequency_rom
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/mcu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mcu
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/music_player.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module music_player
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/note_player.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module note_player
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/sine_reader.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sine_reader
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/sine_rom.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sine_rom
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/song_reader.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module song_reader
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/song_rom.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module song_rom
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/music_player_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module music_player_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/schwinn/final_project/project_1.sim/sim_1/behav/xsim'
+"xelab -wto 649fac6bb3f64933b76be66f434eb721 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot music_player_tb_behav xil_defaultlib.music_player_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 649fac6bb3f64933b76be66f434eb721 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot music_player_tb_behav xil_defaultlib.music_player_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 18 for port 'd' [C:/Users/schwinn/final_project/chord_player.v:107]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 18 for port 'q' [C:/Users/schwinn/final_project/chord_player.v:108]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "C:/Users/schwinn/final_project/project_1.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.dffre(WIDTH=2)
+Compiling module xil_defaultlib.dffr
+Compiling module xil_defaultlib.mcu
+Compiling module xil_defaultlib.dffr(WIDTH=7)
+Compiling module xil_defaultlib.dffr(WIDTH=3)
+Compiling module xil_defaultlib.song_rom
+Compiling module xil_defaultlib.song_reader
+Compiling module xil_defaultlib.dffre(WIDTH=6)
+Compiling module xil_defaultlib.chord_slot
+Compiling module xil_defaultlib.chord_slot(IS_WAITER=1)
+Compiling module xil_defaultlib.dffr(WIDTH=18)
+Compiling module xil_defaultlib.dffre(WIDTH=18)
+Compiling module xil_defaultlib.dffre
+Compiling module xil_defaultlib.frequency_rom
+Compiling module xil_defaultlib.dffre(WIDTH=22)
+Compiling module xil_defaultlib.sine_rom
+Compiling module xil_defaultlib.dff
+Compiling module xil_defaultlib.sine_reader
+Compiling module xil_defaultlib.dffr(WIDTH=48)
+Compiling module xil_defaultlib.note_player
+Compiling module xil_defaultlib.dffre(WIDTH=16)
+Compiling module xil_defaultlib.dffr(WIDTH=16)
+Compiling module xil_defaultlib.dynamics
+Compiling module xil_defaultlib.chord_player
+Compiling module xil_defaultlib.dffre(WIDTH=10)
+Compiling module xil_defaultlib.beat_generator(STOP=100)
+Compiling module xil_defaultlib.codec_conditioner
+Compiling module xil_defaultlib.music_player
+Compiling module xil_defaultlib.dffr(WIDTH=8)
+Compiling module xil_defaultlib.dffre(WIDTH=32)
+Compiling module xil_defaultlib.ac97_if
+Compiling module xil_defaultlib.music_player_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot music_player_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/schwinn/final_project/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "music_player_tb_behav -key {Behavioral:sim_1:Functional:music_player_tb} -tclbatch {music_player_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source music_player_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 0.01s
+Audio out: sound file audio.snd opened for output.
+Playing first song...
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+INFO: [Common 17-344] 'run' was cancelled
+INFO: [Common 17-344] 'source' was cancelled
+xsim: Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 4332.969 ; gain = 0.000
+INFO: [Common 17-344] 'xsim' was cancelled
+INFO: [Vivado 12-5357] 'simulate' step aborted
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:14 . Memory (MB): peak = 4332.969 ; gain = 0.000
+INFO: [Common 17-344] 'launch_simulation' was cancelled
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/schwinn/final_project/project_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'C:/Users/schwinn/final_project/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'music_player_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/schwinn/final_project/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj music_player_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/ac97_if.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ac97_if
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/beat_generator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module beat_generator
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/chord_player.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module chord_player
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/chord_slot.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module chord_slot
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/codec_conditioner.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module codec_conditioner
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/dff.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dff
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/dffr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dffr
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/dffre.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dffre
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/dynamics.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dynamics
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/frequency_rom.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module frequency_rom
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/mcu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mcu
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/music_player.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module music_player
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/note_player.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module note_player
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/sine_reader.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sine_reader
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/sine_rom.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sine_rom
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/song_reader.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module song_reader
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/song_rom.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module song_rom
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/music_player_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module music_player_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/schwinn/final_project/project_1.sim/sim_1/behav/xsim'
+"xelab -wto 649fac6bb3f64933b76be66f434eb721 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot music_player_tb_behav xil_defaultlib.music_player_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 649fac6bb3f64933b76be66f434eb721 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot music_player_tb_behav xil_defaultlib.music_player_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 18 for port 'd' [C:/Users/schwinn/final_project/chord_player.v:107]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 18 for port 'q' [C:/Users/schwinn/final_project/chord_player.v:108]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "C:/Users/schwinn/final_project/project_1.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.dffre(WIDTH=2)
+Compiling module xil_defaultlib.dffr
+Compiling module xil_defaultlib.mcu
+Compiling module xil_defaultlib.dffr(WIDTH=7)
+Compiling module xil_defaultlib.dffr(WIDTH=3)
+Compiling module xil_defaultlib.song_rom
+Compiling module xil_defaultlib.song_reader
+Compiling module xil_defaultlib.dffre(WIDTH=6)
+Compiling module xil_defaultlib.chord_slot
+Compiling module xil_defaultlib.chord_slot(IS_WAITER=1)
+Compiling module xil_defaultlib.dffr(WIDTH=18)
+Compiling module xil_defaultlib.dffre(WIDTH=18)
+Compiling module xil_defaultlib.dffre
+Compiling module xil_defaultlib.frequency_rom
+Compiling module xil_defaultlib.dffre(WIDTH=22)
+Compiling module xil_defaultlib.sine_rom
+Compiling module xil_defaultlib.dff
+Compiling module xil_defaultlib.sine_reader
+Compiling module xil_defaultlib.dffr(WIDTH=48)
+Compiling module xil_defaultlib.note_player
+Compiling module xil_defaultlib.dffre(WIDTH=16)
+Compiling module xil_defaultlib.dffr(WIDTH=16)
+Compiling module xil_defaultlib.dynamics
+Compiling module xil_defaultlib.chord_player
+Compiling module xil_defaultlib.dffre(WIDTH=10)
+Compiling module xil_defaultlib.beat_generator(STOP=100)
+Compiling module xil_defaultlib.codec_conditioner
+Compiling module xil_defaultlib.music_player
+Compiling module xil_defaultlib.dffr(WIDTH=8)
+Compiling module xil_defaultlib.dffre(WIDTH=32)
+Compiling module xil_defaultlib.ac97_if
+Compiling module xil_defaultlib.music_player_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot music_player_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/schwinn/final_project/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "music_player_tb_behav -key {Behavioral:sim_1:Functional:music_player_tb} -tclbatch {music_player_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source music_player_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 0.01s
+Audio out: sound file audio.snd opened for output.
+Playing first song...
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+INFO: [Common 17-344] 'run' was cancelled
+INFO: [Common 17-344] 'source' was cancelled
+xsim: Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 4332.969 ; gain = 0.000
+INFO: [Common 17-344] 'xsim' was cancelled
+INFO: [Vivado 12-5357] 'simulate' step aborted
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:14 . Memory (MB): peak = 4332.969 ; gain = 0.000
+INFO: [Common 17-344] 'launch_simulation' was cancelled
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run all
+Audio out: sound file audio.snd opened for output.
+Playing first song...
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run all
+Audio out: sound file audio.snd opened for output.
+Playing first song...
+run: Time (s): cpu = 00:00:14 ; elapsed = 00:00:29 . Memory (MB): peak = 4332.969 ; gain = 0.000
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run all
+Audio out: sound file audio.snd opened for output.
+Playing first song...
+run: Time (s): cpu = 00:00:04 ; elapsed = 00:00:09 . Memory (MB): peak = 4332.969 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/schwinn/final_project/project_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'C:/Users/schwinn/final_project/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'music_player_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/schwinn/final_project/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj music_player_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/ac97_if.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ac97_if
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/beat_generator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module beat_generator
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/chord_player.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module chord_player
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/chord_slot.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module chord_slot
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/codec_conditioner.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module codec_conditioner
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/dff.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dff
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/dffr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dffr
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/dffre.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dffre
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/dynamics.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dynamics
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/frequency_rom.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module frequency_rom
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/mcu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mcu
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/music_player.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module music_player
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/note_player.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module note_player
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/sine_reader.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sine_reader
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/sine_rom.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sine_rom
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/song_reader.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module song_reader
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/song_rom.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module song_rom
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/schwinn/final_project/music_player_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module music_player_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/schwinn/final_project/project_1.sim/sim_1/behav/xsim'
+"xelab -wto 649fac6bb3f64933b76be66f434eb721 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot music_player_tb_behav xil_defaultlib.music_player_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 649fac6bb3f64933b76be66f434eb721 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot music_player_tb_behav xil_defaultlib.music_player_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "C:/Users/schwinn/final_project/project_1.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.dffre(WIDTH=2)
+Compiling module xil_defaultlib.dffr
+Compiling module xil_defaultlib.mcu
+Compiling module xil_defaultlib.dffr(WIDTH=7)
+Compiling module xil_defaultlib.dffr(WIDTH=3)
+Compiling module xil_defaultlib.song_rom
+Compiling module xil_defaultlib.song_reader
+Compiling module xil_defaultlib.dffre(WIDTH=6)
+Compiling module xil_defaultlib.chord_slot
+Compiling module xil_defaultlib.chord_slot(IS_WAITER=1)
+Compiling module xil_defaultlib.dffre
+Compiling module xil_defaultlib.frequency_rom
+Compiling module xil_defaultlib.dffre(WIDTH=22)
+Compiling module xil_defaultlib.sine_rom
+Compiling module xil_defaultlib.dff
+Compiling module xil_defaultlib.sine_reader
+Compiling module xil_defaultlib.dffr(WIDTH=48)
+Compiling module xil_defaultlib.note_player
+Compiling module xil_defaultlib.dffre(WIDTH=16)
+Compiling module xil_defaultlib.dffr(WIDTH=16)
+Compiling module xil_defaultlib.dynamics
+Compiling module xil_defaultlib.chord_player
+Compiling module xil_defaultlib.dffre(WIDTH=10)
+Compiling module xil_defaultlib.beat_generator(STOP=100)
+Compiling module xil_defaultlib.codec_conditioner
+Compiling module xil_defaultlib.music_player
+Compiling module xil_defaultlib.dffr(WIDTH=8)
+Compiling module xil_defaultlib.dffre(WIDTH=32)
+Compiling module xil_defaultlib.ac97_if
+Compiling module xil_defaultlib.music_player_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot music_player_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/schwinn/final_project/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "music_player_tb_behav -key {Behavioral:sim_1:Functional:music_player_tb} -tclbatch {music_player_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source music_player_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 0.01s
+Audio out: sound file audio.snd opened for output.
+Playing first song...
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+INFO: [Common 17-344] 'run' was cancelled
+INFO: [Common 17-344] 'source' was cancelled
+xsim: Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 4332.969 ; gain = 0.000
+INFO: [Common 17-344] 'xsim' was cancelled
+INFO: [Vivado 12-5357] 'simulate' step aborted
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:14 . Memory (MB): peak = 4332.969 ; gain = 0.000
+INFO: [Common 17-344] 'launch_simulation' was cancelled
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run all
+Audio out: sound file audio.snd opened for output.
+Playing first song...
+run: Time (s): cpu = 00:00:11 ; elapsed = 00:00:29 . Memory (MB): peak = 4332.969 ; gain = 0.000
+run all
+run: Time (s): cpu = 00:00:10 ; elapsed = 00:00:26 . Memory (MB): peak = 4332.969 ; gain = 0.000
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/schwinn/final_project/project_1.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Tue Dec 12 18:59:45 2023] Launched synth_1...
+Run output will be captured here: C:/Users/schwinn/final_project/project_1.runs/synth_1/runme.log
+[Tue Dec 12 18:59:45 2023] Launched impl_1...
+Run output will be captured here: C:/Users/schwinn/final_project/project_1.runs/impl_1/runme.log
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 4332.969 ; gain = 0.000
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2019.1
+  **** Build date : May 24 2019 at 15:13:31
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+set_property PROGRAM.FILE {C:/Users/schwinn/final_project/project_1.runs/impl_1/lab5_top.bit} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/Users/schwinn/final_project/project_1.runs/impl_1/lab5_top.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+INFO: [Labtools 27-1435] Device xc7z020 (JTAG device index = 1) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1435] Device xc7z020 (JTAG device index = 1) is not programmed (DONE status = 0).
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/Users/schwinn/final_project/project_1.runs/impl_1/lab5_top.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+close_hw
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Dec 12 19:23:59 2023...

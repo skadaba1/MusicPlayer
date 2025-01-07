@@ -1,0 +1,171 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+<<<<<<< HEAD
+# Start of session at: Wed Dec 13 14:06:05 2023
+# Process ID: 10860
+# Current directory: C:/Users/schwinn/final_project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11808 C:\Users\schwinn\final_project\project_1.xpr
+=======
+<<<<<<< HEAD
+<<<<<<< main
+<<<<<<< main
+# Start of session at: Tue Dec 12 22:16:10 2023
+# Process ID: 12980
+# Current directory: C:/Users/schwinn/final_project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent2784 C:\Users\schwinn\final_project\project_1.xpr
+=======
+# Start of session at: Tue Dec 12 21:31:33 2023
+# Process ID: 12992
+# Current directory: C:/Users/schwinn/final_project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent13184 C:\Users\schwinn\final_project\project_1.xpr
+>>>>>>> Stash
+=======
+# Start of session at: Wed Dec 13 06:28:33 2023
+# Process ID: 7028
+# Current directory: C:/Users/schwinn/final_project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11768 C:\Users\schwinn\final_project\project_1.xpr
+>>>>>>> tb working echo
+=======
+# Start of session at: Wed Dec 13 06:28:33 2023
+# Process ID: 7028
+# Current directory: C:/Users/schwinn/final_project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11768 C:\Users\schwinn\final_project\project_1.xpr
+>>>>>>> d5afa2492b10206a6157e7f9f362131d766a4c94
+>>>>>>> c8750dbdc701453d2d2ec670764e5d1e96294522
+# Log file: C:/Users/schwinn/final_project/vivado.log
+# Journal file: C:/Users/schwinn/final_project\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/schwinn/final_project/project_1.xpr
+<<<<<<< main
+<<<<<<< main
+<<<<<<< main
+=======
+update_compile_order -fileset sources_1
+<<<<<<< HEAD
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+open_hw
+close_hw
+=======
+update_compile_order -fileset sources_1
+=======
+>>>>>>> d5afa2492b10206a6157e7f9f362131d766a4c94
+launch_simulation
+source music_player_tb.tcl
+current_wave_config {Untitled 1}
+add_wave {{/music_player_tb/music_player/chord_sample}} 
+current_wave_config {Untitled 1}
+add_wave {{/music_player_tb/music_player/echo_sample}} 
+restart
+current_wave_config {Untitled 1}
+add_wave {{/music_player_tb/music_player/final_sample}} 
+run 10 ms
+close_sim
+launch_simulation
+source music_player_tb.tcl
+<<<<<<< HEAD
+current_wave_config {Untitled 2}
+add_wave {{/music_player_tb/music_player/echo_sample}} 
+current_wave_config {Untitled 2}
+add_wave {{/music_player_tb/music_player/final_sample}} 
+current_wave_config {Untitled 2}
+add_wave {{/music_player_tb/music_player/chord_sample}} 
+run 10 ms
+restart
+run 10 ms
+current_wave_config {Untitled 2}
+add_wave {{/music_player_tb/music_player/generate_next_sample}} 
+current_wave_config {Untitled 2}
+add_wave {{/music_player_tb/music_player/echo_sample_ready_pulse}} 
+restart
+run 10 ms
+=======
+<<<<<<< HEAD
+>>>>>>> tb working echo
+=======
+>>>>>>> d5afa2492b10206a6157e7f9f362131d766a4c94
+>>>>>>> c8750dbdc701453d2d2ec670764e5d1e96294522
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/schwinn/final_project/project_1.runs/impl_1/lab5_top.bit} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z020_1] 0]
+<<<<<<< HEAD
+<<<<<<< main
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/Users/schwinn/final_project/project_1.runs/impl_1/lab5_top.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/Users/schwinn/final_project/project_1.runs/impl_1/lab5_top.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/Users/schwinn/final_project/project_1.runs/impl_1/lab5_top.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+=======
+>>>>>>> tb working echo
+=======
+>>>>>>> d5afa2492b10206a6157e7f9f362131d766a4c94
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/Users/schwinn/final_project/project_1.runs/impl_1/lab5_top.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+<<<<<<< HEAD
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/Users/schwinn/final_project/project_1.runs/impl_1/lab5_top.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+close_hw
+open_hw
+connect_hw_server
+disconnect_hw_server localhost:3121
+connect_hw_server
+disconnect_hw_server localhost:3121
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/schwinn/final_project/project_1.runs/impl_1/lab5_top.bit} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z020_1] 0]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/Users/schwinn/final_project/project_1.runs/impl_1/lab5_top.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+=======
+<<<<<<< HEAD
+<<<<<<< main
+reset_run synth_1
+>>>>>>> Stash
+=======
+>>>>>>> tb working echo
+=======
+>>>>>>> tb working echo
+=======
+>>>>>>> d5afa2492b10206a6157e7f9f362131d766a4c94
+>>>>>>> c8750dbdc701453d2d2ec670764e5d1e96294522

@@ -1,0 +1,17 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Wed Dec 13 00:09:45 2023
+# Process ID: 9952
+# Current directory: C:/Users/schwinn/final_project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent4880 C:\Users\schwinn\final_project\project_1.xpr
+# Log file: C:/Users/schwinn/final_project/vivado.log
+# Journal file: C:/Users/schwinn/final_project\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/schwinn/final_project/project_1.xpr
+update_compile_order -fileset sources_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+reset_run synth_1
